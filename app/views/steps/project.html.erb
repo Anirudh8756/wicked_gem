@@ -1,11 +1,10 @@
-<%= form_for @project, url: wizard_path , method: :post do |f| %>
+<%= form_for @project, url: wizard_path, method: :put do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
   <%= f.object.errors.full_messages_for(:name)&.first %>
   
-  <%= f.label :details %>
-  <%= f.text_field :details %>
-  <%= f.object.errors.full_messages_for(:details)&.first %>
-
-  <%= f.submit 'Next', name: 'Next' %>
-<%= end %>
+  <%= f.label :detail %>
+  <%= f.text_field :detail %>
+  <%= f.object.errors.full_messages_for(:detail)&.first %>
+  <%= f.submit 'Next' %>
+<% end %>

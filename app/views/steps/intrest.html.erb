@@ -1,7 +1,7 @@
-<%= form_for @intrest, url: wizard_path , method: :post do |f| %>
+<%= form_for @intrest, url: wizard_path , method: :patch do |f| %>
   <%= f.label :intrest_name %>
   <%= f.text_field :intrest_name %>
   <%= f.object.errors.full_messages_for(:intrest_name)&.first %>
 
-  <%= f.submit 'Next', name: 'Next' %>
-<%= end %>
+  <%= f.submit 'Next' %>
+<% end %>

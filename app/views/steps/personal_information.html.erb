@@ -1,8 +1,7 @@
-<%= form_for @personal_info , url: wizard_path(step: :personal_information  ) , method: :put do |f| %>
+<%= form_for @personal_info, url: wizard_path , method: :put do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
   <%= f.object.errors.full_messages_for(:name)&.first %>
-
 
   <%= f.label :contact_no %>
   <%= f.text_field :contact_no %>
@@ -12,5 +11,5 @@
   <%= f.text_field :address %>
   <%= f.object.errors.full_messages_for(:address)&.first %>
 
-  <%= f.submit 'Next', name: 'Next' %>
-<%= end %>
+  <%= f.submit 'Next' %>
+<% end %>

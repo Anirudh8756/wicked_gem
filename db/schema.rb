@@ -10,11 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_11_01_072100) do
+ActiveRecord::Schema[7.2].define(version: 2024_11_01_122747) do
   create_table "intrests", force: :cascade do |t|
     t.string "intrest_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
   end
 
   create_table "personal_informations", force: :cascade do |t|
@@ -24,6 +25,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_11_01_072100) do
     t.text "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
   end
 
   create_table "projects", force: :cascade do |t|
@@ -31,12 +33,14 @@ ActiveRecord::Schema[7.2].define(version: 2024_11_01_072100) do
     t.text "detail"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
   end
 
   create_table "tools", force: :cascade do |t|
     t.string "tool_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|

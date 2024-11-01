@@ -58,3 +58,4 @@ end
 
 gem "devise", "~> 4.9"
 gem 'wicked'
+gem 'simple_form'
