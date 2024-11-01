@@ -1,0 +1,6 @@
+<%= form_for @project, url: wizard_path , method: :post do |f| %>
+  <%= f.label :tool_name %>
+  <%= f.text_field :tool_name %>
+  <%= f.object.errors.full_messages_for(:tool_name)&.first %>
+  <%= f.submit 'Next', name: 'Next' %>
+<%= end %>
